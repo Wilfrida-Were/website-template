@@ -5,11 +5,27 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #fdfaf6; /* soft neutral background */
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  background-color: #fdfaf6;
   color: #333;
   line-height: 1.6;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #8b5e3c;
 }
 
 /* Header */
@@ -17,6 +33,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 1rem 2rem;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
@@ -33,6 +50,7 @@ body {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .nav a {
@@ -43,7 +61,7 @@ body {
 }
 
 .nav a:hover {
-  color: #8b5e3c; /* brass accent */
+  color: #8b5e3c;
 }
 
 .whatsapp-order {
@@ -66,28 +84,6 @@ body {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #fff;
-    width: 100%;
-    display: none;
-    padding: 1rem;
-    border-top: 1px solid #ddd;
-  }
-
-  #menu-toggle:checked + .hamburger + .nav ul {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
 /* Footer */
 .footer {
   display: flex;
@@ -103,7 +99,7 @@ body {
 .footer-left,
 .footer-center,
 .footer-right {
-  flex: 1;
+  flex: 1 1 100%;
   margin: 0.5rem 0;
 }
 
@@ -139,7 +135,7 @@ body {
   position: absolute;
   bottom: 2rem;
   right: 2rem;
-  background-color: #000; /* black */
+  background-color: #000;
   color: #fff;
   padding: 0.6rem;
   border-radius: 50%;
@@ -152,4 +148,44 @@ body {
 
 .scroll-up:hover {
   background-color: #333;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+  }
+
+  #menu-toggle:checked + .hamburger + .nav ul {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .scroll-up {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+  }
 }
