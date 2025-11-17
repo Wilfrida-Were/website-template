@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #fdfaf6; /* soft neutral background */
   color: #333;
   line-height: 1.6;
@@ -43,11 +43,11 @@ body {
 }
 
 .nav a:hover {
-  color: #8b5e3c; /* bronze accent */
+  color: #8b5e3c; /* brass accent */
 }
 
 .whatsapp-order {
-  color: #25D366; /* WhatsApp green */
+  color: #25D366;
   font-weight: 600;
 }
 
@@ -115,7 +115,7 @@ body {
 }
 
 .footer-right a:hover {
-  color: #8b5e3c; /* bronze accent */
+  color: #8b5e3c;
 }
 
 .footer-whatsapp {
@@ -134,3 +134,22 @@ body {
   background-color: #1ebe5d;
 }
 
+/* Scroll-to-top arrow */
+.scroll-up {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: #8b5e3c;
+  color: white;
+  padding: 0.6rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.scroll-up:hover {
+  background-color: #a06c48;
+}
