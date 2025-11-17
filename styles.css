@@ -136,11 +136,11 @@ body {
 
 /* Scroll-to-top arrow */
 .scroll-up {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  background-color: #8b5e3c;
-  color: white;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #000; /* black */
+  color: #fff;
   padding: 0.6rem;
   border-radius: 50%;
   font-size: 1.2rem;
@@ -151,5 +151,5 @@ body {
 }
 
 .scroll-up:hover {
-  background-color: #a06c48;
+  background-color: #333;
 }
